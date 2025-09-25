@@ -5,6 +5,9 @@ import { useNavigate , Link } from "react-router-dom";
 export default function Login(){
 
     const [form , setForm] = useState({email: "" , password: ""});
+     const [showPassword, setShowPassword] = useState(false);
+
+
     const navigate = useNavigate();
 
     const handleChange = (e) => setForm({...form , [e.target.name]: e.target.value});
@@ -31,7 +34,8 @@ export default function Login(){
                 <h2 style={{textAlign: 'center'}}>Login</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="email" name="email" placeholder="Email" onChange={handleChange} required style={{width: '100%', padding: 8, marginBottom: 12, borderRadius: 8, border: '1px solid #ccc'}}/> <br />
-                    <input type="password" name="password" placeholder="Password" onChange={handleChange} required style={{width: '100%', padding: 8, marginBottom: 12, borderRadius: 8, border: '1px solid #ccc'}}/><br />
+                    <input type={showPassword ? "text" : "password"} name="password" placeholder="Password" onChange={handleChange} required style={{width: '100%', padding: 8, marginBottom: 12, borderRadius: 8, border: '1px solid #ccc'}}/><br />
+                    <input type="checkbox" checked={showPassword} onChange={() => setShowPassword(!showPassword)} style={{marginBottom: 10}}/>{" "}Show Password
                     <button type="submit" style={{width: '100%', background: '#2563eb', color: '#fff', padding: 10, borderRadius: 8, border: 'none', fontWeight: 600}}>Login</button>
                     <div style={{marginTop: 16, textAlign: 'center'}}>
                       <span>Don't have an account? </span>

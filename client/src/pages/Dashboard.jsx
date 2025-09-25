@@ -6,9 +6,9 @@ import Loader from "../components/Loader";
 
 function Navbar({ user, onLogout }) {
     return (
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 32px', background: '#2563eb', color: '#fff', borderRadius: 12, marginBottom: 24}}>
-            <div style={{fontWeight: 600, fontSize: 18}}>SpentWise</div>
-            <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 32px', background: '#2563eb', color: '#fff', borderRadius: 20, marginBottom: 24}}>
+            <div style={{fontWeight: 600, fontSize: 22 , paddingLeft: 80}}>SpentWise</div>
+            <div style={{display: 'flex', alignItems: 'center', paddingRight: 80 , gap: 25}}>
                 <span style={{fontWeight: 500}}>Hi, {user?.name || 'User'}</span>
                 <button onClick={onLogout} style={{background: '#fff', color: '#2563eb', border: 'none', borderRadius: 8, padding: '6px 16px', fontWeight: 600, cursor: 'pointer'}}>Logout</button>
             </div>
@@ -36,7 +36,9 @@ export default function Dashboard(){
         if (userStr) {
             try {
                 setUser(JSON.parse(userStr));
-            } catch {}
+            } catch {
+                setUser(null);
+            }
         }
      }, []);
     const handleLogout = () => {
