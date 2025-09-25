@@ -64,8 +64,8 @@ Database: MongoDB Atlas
 
 Clone the repository:
 
-git clone https://github.com/your-username/expense-tracker.git
-cd expense-tracker
+git clone https://github.com/shashanthroyal/SpentWise.git
+cd SpentWise
 
 Backend Setup
 cd server
