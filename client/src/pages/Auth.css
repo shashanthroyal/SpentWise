@@ -1,0 +1,128 @@
+/* Show password checkbox and label inline */
+.auth-password {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.auth-password input[type="checkbox"] {
+  margin-right: 4px;
+  width: 18px;
+  height: 18px;
+}
+/* Auth (Login/Register) page styles */
+.auth-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.auth-box {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #0001;
+  width: 100%;
+  max-width: 400px;
+}
+.auth-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.auth-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.auth-form button {
+  width: 100%;
+  background: #2563eb;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  margin-top: 8px;
+}
+.auth-link {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+.auth-link-wrap {
+  margin-top: 16px;
+  text-align: center;
+}
+
+ @media (max-width: 500px) {
+      .auth-password {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+        white-space: nowrap;
+      }
+      .auth-password input[type="checkbox"] {
+        min-width: 22px;
+        min-height: 22px;
+        margin-right: 4px;
+      }
+      .auth-box {
+        padding: 16px;
+        max-width: 80vw;
+        min-width: 0;
+      }
+      .auth-title {
+        font-size: 1.1rem;
+      }
+      .auth-bg {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .auth-form input {
+        padding: 14px 10px;
+        font-size: 1.05rem;
+        margin-bottom: 12px;
+        min-width: 0;
+        box-sizing: border-box;
+      }
+      .auth-form button {
+        padding: 14px 0;
+        font-size: 1.08rem;
+        margin-top: 10px;
+        border-radius: 10px;
+      }
+      
+      .auth-link-wrap {
+        margin-top: 14px;
+        font-size: 1rem;
+        word-break: break-word;
+      }
+      .auth-link {
+        font-size: 1.05rem;
+        word-break: break-word;
+      }
+      body {
+        overflow-x: hidden;
+      }
+    }
