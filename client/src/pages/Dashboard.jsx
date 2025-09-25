@@ -5,10 +5,15 @@ import { PieChart , Pie , Cell , Tooltip  , Legend , ResponsiveContainer } from 
 import Loader from "../components/Loader";
 import './Dashboard.css'
 
+import logo from '../assets/logo.png';
+
 function Navbar({ user, onLogout }) {
     return (
         <div className="dashboard-navbar">
-            <div className="dashboard-navbar-title">SpentWise</div>
+            <div className="dashboard-navbar-title">
+                <img src={logo} alt="Logo"  />
+                <h2 >SpentWise</h2>
+            </div>
             <div className="dashboard-navbar-user">
                 <span>Hi, {user?.name || 'User'}</span>
                 <button className="dashboard-navbar-logout" onClick={onLogout}>Logout</button>
@@ -170,8 +175,8 @@ export default function Dashboard(){
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {expenses.length > 0 ? (
-                                        expenses.map((exp) => (
+                                    {filteredExpenses.length > 0 ? (
+                                        filteredExpenses.map((exp) => (
                                             <tr key={exp._id}>
                                                 <td>{exp.title}</td>
                                                 <td>{exp.amount}</td>

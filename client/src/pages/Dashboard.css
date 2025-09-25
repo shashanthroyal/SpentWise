@@ -1,3 +1,4 @@
+
 /* Dashboard page styles */
 .dashboard-bg {
   min-height: 100vh;
@@ -8,29 +9,48 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
-  background: #2563eb;
-  color: #fff;
+  background: none;
+  color: black;
   border-radius: 12px;
   margin-bottom: 24px;
-  margin: 10px 30px;
+  
 }
 .dashboard-navbar-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+  min-width: 40px;
+  margin-left: 4px;
   font-weight: 600;
-  font-size: 18px;
+}
+
+.dashboard-navbar-title img {
+  display: block;
+  height: 60px;
+  width: 60px;
+  margin-right: -10px;
+  border-radius: 8px;
+  
 }
 .dashboard-navbar-user {
   display: flex;
   align-items: center;
   gap: 16px;
+  font-size: 20px;
+  font-weight: 500;
 }
 .dashboard-navbar-logout {
-  background: #fff;
-  color: #2563eb;
+  
   border: none;
-  border-radius: 8px;
   padding: 6px 16px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.dashboard-navbar-logout:hover {
+  background: #2563eb;
+  color: white;
 }
 .dashboard-main {
   display: flex;
@@ -169,8 +189,8 @@
     flex-direction: row;
     gap: 6px;
     padding: 8px 4px;
-    border-radius: 0;
-    margin: 0 0 12px 0;
+    border-radius: 0px;
+    margin: 3px 0 12px 0;
     justify-content: space-around;
   }
   .dashboard-content {
@@ -180,14 +200,29 @@
     box-shadow: 0 2px 8px #0001;
   }
   .dashboard-navbar-title {
-    font-size: 0.98rem;
+    font-size: 1.2rem;
     padding-left: 0;
     text-align: center;
+
+    img{
+        height: 40px;
+        width: 40px;
+        border-radius: 8px;
+    }
   }
   .dashboard-navbar-user {
     flex-direction: row;
     gap: 50px;
     padding-right: 0;
+
+    span {
+        display: none;
+    }
+
+    button{
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
   }
   .dashboard-main {
     min-height: unset;
@@ -225,7 +260,7 @@
   }
   .dashboard-chart {
     height: 280px;
-    width: 90vw
+    width: 90vw;
     margin-bottom: 12px;
     border-radius: 8px;
     width: 80%;
