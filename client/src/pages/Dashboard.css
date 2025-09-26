@@ -191,7 +191,8 @@
     padding: 8px 4px;
     border-radius: 0px;
     margin: 3px 0 12px 0;
-    justify-content: space-around;
+    justify-content: space-between;
+    background-color: seashell
   }
   .dashboard-content {
     margin: 6px 0;
@@ -200,14 +201,20 @@
     box-shadow: 0 2px 8px #0001;
   }
   .dashboard-navbar-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding-left: 0;
     text-align: center;
 
+
+    h2{
+        font-size: 1.2rem !important;
+        margin-bottom: 0 !important;
+    }
     img{
-        height: 40px;
-        width: 40px;
-        border-radius: 8px;
+        height: 45px;
+        width: 45px;
+        margin-bottom: -9px;
+        
     }
   }
   .dashboard-navbar-user {
@@ -221,7 +228,9 @@
 
     button{
         padding: 6px 10px;
-        font-size: 0.85rem;
+        font-size: 1.2rem;
+        margin-right: 15px;
+        margin-top: 5px;
     }
   }
   .dashboard-main {
