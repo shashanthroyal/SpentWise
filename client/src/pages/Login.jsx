@@ -1,6 +1,7 @@
 import { useState } from "react";
-import axios from "axios";
 import { useNavigate , Link } from "react-router-dom";
+import API from "../api";
+import  './Auth.css'
 
 export default function Login(){
 
@@ -15,7 +16,7 @@ export default function Login(){
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const {data} = await axios.post("http://localhost:5000/api/auth/login", form);
+            const {data} = await API.post("/auth/login", form);
             localStorage.setItem("token" , data.token);
             if (data.user) {
                 localStorage.setItem("user", JSON.stringify(data.user));

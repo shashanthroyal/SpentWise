@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { PieChart , Pie , Cell , Tooltip  , Legend , ResponsiveContainer } from 'recharts';
 import Loader from "../components/Loader";
 import './Dashboard.css'
-
 import logo from '../assets/logo.png';
 
 function Navbar({ user, onLogout }) {
