@@ -128,9 +128,9 @@ export default function Dashboard(){
                         {/* Summary */}
                         <h3 style={{fontSize: 20, fontWeight: 600, marginBottom: 16, textAlign: 'center'}}>Total Spent: <span style={{color: '#2563eb'}}>{total}</span></h3>
                         {/* Date Filters */}
-                        <div className="dashboard-filters">
-                            <input type="date" name="start" value={filters.start} onChange={handleFilterChange} />
-                            <input type="date" name="end" value={filters.end} onChange={handleFilterChange} />
+                        <div className="dashboard-filters"> Filter by Date:
+                            <input type="date" name="start"  value={filters.start} onChange={handleFilterChange} />
+                            <input type="date" name="end"  value={filters.end} onChange={handleFilterChange} />
                             <button className="dashboard-filter-btn" onClick={applyFilters}>Apply Filters</button>
                         </div>
                         {/* Add Expense Form */}

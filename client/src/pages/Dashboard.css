@@ -13,6 +13,7 @@
   color: black;
   border-radius: 12px;
   margin-bottom: 24px;
+  background: #fff;
   
 }
 .dashboard-navbar-title {
@@ -192,7 +193,7 @@
     border-radius: 0px;
     margin: 3px 0 12px 0;
     justify-content: space-between;
-    background-color: seashell
+    background: #fff;
   }
   .dashboard-content {
     margin: 6px 0;
